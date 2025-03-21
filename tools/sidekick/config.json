@@ -1,25 +1,13 @@
 {
-  "project": "JMP-DA",
-  "editUrlLabel": "Document Authoring",
-  "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}",
-  "plugins": [
-    {
-      "id": "jmptags",
-      "title": "JMP Tags",
-      "environments": ["da-edit"],
-      "path": "/tools/tags.html"
-    },
-    {
-      "id": "datepicker",
-      "title": "Date Picker",
-      "environments": ["da-edit"],
-      "path": "/tools/datepicker.html"
-    },
-    {
-      "id": "querybuilder",
-      "title": "Query Builder",
-      "environments": ["da-edit"],
-      "path": "/tools/querybuilder.html"
-    }
-  ]
+    "project": "AEM-SANDBOX",
+    "editUrlLabel": "Document Authoring",
+    "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}",
+    "plugins": [
+        {
+        "id": "querybuilder",
+        "title": "Query Builder",
+        "environments": ["da-edit"],
+        "path": "/tools/querybuilder.html"
+        }
+    ]
 }
