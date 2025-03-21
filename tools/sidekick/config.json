@@ -7,7 +7,8 @@
       "id": "querybuilder",
       "title": "Query Builder",
       "environments": ["da-edit"],
-      "path": "https://main--aem-sandbox--latimk.aem.live/tools/querybuilder.html"
+      "url": "https://main--aem-sandbox--latimk.aem.live/tools/querybuilder.html",
+      "path": "/tools/querybuilder.html"
     }
   ]
 }
