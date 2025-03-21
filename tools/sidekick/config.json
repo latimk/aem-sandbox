@@ -5,7 +5,7 @@
   "plugins": [
     {
       "id": "querybuilder",
-      "title": "Query Builder",
+      "title": "Query Builder2",
       "environments": ["da-edit"],
       "path": "/tools/querybuilder.html"
     }
