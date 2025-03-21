@@ -93,7 +93,6 @@ function initControls() {
 }
 
 (async function init() {
-  console.log('init');
   const { actions } = await DA_SDK;
 
   buildDropdownOptions();
