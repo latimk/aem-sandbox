@@ -1,40 +1,11 @@
 // eslint-disable-next-line import/no-unresolved
 import DA_SDK from 'https://da.live/nx/utils/sdk.js';
+import { getQueryIndex } from '../../scripts/utilities.js';
 
-export function initTimeZones(doc = document) {
-  const select = doc.getElementById('time-zone');
-
-  let defTZ = '';
-  const curTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const timezonesWithoffsets = Intl.supportedValuesOf('timeZone').map((timeZone) => {
-    let offset = new Intl.DateTimeFormat('en', { timeZone, timeZoneName: 'longOffset' })
-      .formatToParts().find((part) => part.type === 'timeZoneName').value;
-    if (offset === 'GMT') {
-      offset = 'GMT+00:00';
-    }
-    const timeZoneAbbrivation = new Intl.DateTimeFormat('en', { timeZone, timeZoneName: 'long' })
-      .formatToParts().find((part) => part.type === 'timeZoneName').value;
-    const tz = `(${offset}) ${timeZoneAbbrivation}`;
-    if (timeZone === curTZ) {
-      defTZ = tz;
-    }
-    return tz;
-  });
-  const tzSet = Array.from(new Set(timezonesWithoffsets)).sort();
-
-  tzSet.forEach((tz) => {
-    const opt = doc.createElement('option');
-    opt.textContent = tz;
-
-    const delta = tz.substring(4, tz.indexOf(')'));
-    opt.value = delta;
-
-    if (tz === defTZ) {
-      opt.selected = true;
-    }
-
-    select.appendChild(opt);
-  });
+export async function getProperties() {
+  const indexUrl = '/index.json';
+  const { data: allPages } = await getQueryIndex(indexUrl);
+  console.log(allPages);
 }
 
 function typeChange(e) {
@@ -113,5 +84,4 @@ function initControls(actions) {
   const { actions } = await DA_SDK;
 
   initControls(actions);
-  initTimeZones();
 }());
