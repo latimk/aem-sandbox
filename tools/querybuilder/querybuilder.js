@@ -5,13 +5,6 @@ import {
   getQueryIndex
 } from '../../scripts/utilities.js';
 
-
-index.js
-import {$,jQuery} from 'jquery';
-// export for others scripts to use
-window.$ = $;
-window.jQuery = jQuery;
-
 export async function getProperties() {
   const indexUrl = '/index-all.json';
   const { columns: properties} = await getQueryIndex(indexUrl);
