@@ -1,13 +1,12 @@
 {
   "project": "AEM-SANDBOX",
-  "editUrlLabel": "Document Authoring",
-  "editUrlPattern": "https://da.live/edit#/{{org}}/{{site}}{{pathname}}",
   "plugins": [
     {
       "id": "querybuilder",
       "title": "Query Builder",
-      "environments": ["da-edit"],
-      "path": "/tools/querybuilder.html"
+      "environments": ["edit"],
+      "daLibrary": true,
+      "url": "https://main--aem-sandbox--latimk.aem.live/tools/querybuilder.html"
     }
   ]
 }
