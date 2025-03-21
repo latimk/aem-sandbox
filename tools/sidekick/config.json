@@ -5,9 +5,9 @@
   "plugins": [
     {
       "id": "querybuilder",
-      "title": "Query Builder2",
+      "title": "Query Builder",
       "environments": ["da-edit"],
-      "path": "/tools/querybuilder.html"
+      "path": "https://main--aem-sandbox--latimk.aem.live/tools/querybuilder.html"
     }
   ]
 }
