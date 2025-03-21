@@ -35,7 +35,6 @@ function createTag(tag, attributes, html) {
   return el;
 }
 
-
 export {
   createTag,
   getQueryIndex,
