@@ -8,6 +8,12 @@
       "title": "Query Builder",
       "environments": ["da-edit"],
       "path": "/tools/querybuilder.html"
+    },
+    {
+      "id": "another",
+      "title": "Another",
+      "environments": ["da-edit"],
+      "path": "/tools/querybuilder.html"
     }
   ]
 }
